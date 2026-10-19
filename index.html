@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Perfil Accesible</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="card-container">
+
+        <!-- Sección Izquierda: Formulario -->
+        <section class="form-section">
+            <form action="#" method="POST" novalidate>
+
+                <!-- Campo: Nombre Completo -->
+                <div class="form-group">
+                    <label for="full-name" class="form-label">Nombre Completo</label>
+                    <input type="text" id="full-name" name="full-name" class="form-input"
+                        placeholder="Como te podemos llamar?" aria-required="true">
+                </div>
+
+                <!-- Campo: Email Normal -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="correoejemplo@gmail.com"
+                        aria-required="true" required>
+                </div>
+
+                <!-- Campo: Contraseña -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Ingrese Contraseña</label>
+                    <div class="password-wrapper">
+                        <!-- Checkbox invisible controlado por teclado/CSS -->
+                        <input type="checkbox" id="toggle-password" class="toggle-password-checkbox"
+                            aria-label="Show password">
+                        <input type="password" id="password" name="password" class="form-input password-input"
+                            placeholder="xxxxxxxx" aria-required="true">
+                        <!-- Botón toggle accesible sin JS mediante <label> -->
+                        <label for="toggle-password" class="password-toggle-btn" tabindex="0" role="button"
+                            aria-label="Toggle password visibility">
+                            <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campo: Confirmar Contraseña -->
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+                    <div class="password-wrapper">
+                        <input type="checkbox" id="toggle-confirm-password" class="toggle-password-checkbox"
+                            aria-label="Show confirm password">
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            class="form-input password-input" placeholder="xxxxxxxx" aria-required="true">
+                        <label for="toggle-confirm-password" class="password-toggle-btn" tabindex="0" role="button"
+                            aria-label="Toggle confirm password visibility">
+                            <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Actualizar Perfil</button>
+            </form>
+        </section>
+
+        <!-- Sección Derecha: Progreso (Solo Visual) -->
+        <section class="progress-section" aria-label="Profile Completeness Progress">
+
+            <!-- Círculo de Porcentaje -->
+            <div class="percentage-circle" role="img" aria-label="65 percent completed">
+                <span class="percentage-text">65%</span>
+            </div>
+
+            <h2 class="progress-title">Perfil Completado</h2>
+
+            <!-- Lista de tareas -->
+            <div class="task-card">
+                <ul class="task-list">
+                    <li class="task-item completed">Crear Cuenta</li>
+                    <li class="task-item completed">Actulizar progreso de hoja de ruta</li>
+                    <li class="task-item completed">Configuara perfil público</li>
+                    <li class="task-item active">Completar tu primer proyecto</li>
+                    <li class="task-item">Invitar a tus amigos</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
